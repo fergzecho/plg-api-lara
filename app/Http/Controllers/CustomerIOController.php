@@ -80,7 +80,7 @@ class CustomerIOController extends Controller
     public function getSegmentMembersPaginated(int|string $segmentId): JsonResponse
     {
         $page = (int) request()->query('page', 1);
-        $perPage = (int) request()->query('per_page', 50);
+        $perPage = (int) request()->query('per_page', 1000);
         $start = request()->query('start');
         
         // If start token is provided, use it directly (for deep pagination)
